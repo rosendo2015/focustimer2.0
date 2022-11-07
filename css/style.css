@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.6rem;
+
+}
+
+main {
+    padding: clamp(5rem, 4rem + 4vw, 10rem);
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    width: fit-content;    
+}
+
+.display-timer {
+    margin: 0 auto;
+}
+
+.timer,
+.wrapper-buttons {
+
+    min-width: 321px;
+    height: 230px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer span {
+
+    font-size: 11rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14.8rem;
+}
+
+.controls {
+    margin: 0 auto;
+    max-width: 312px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+.hide {
+    display: none;
+}
+
+.wrapper-buttons {
+    
+    width: fit-content;
+    height: 100%;
+    display: grid;
+    grid-gap: 32px;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: "A B"
+        "C D";
+}
+
+.button {
+    cursor: pointer;
+    transition: all 1s;
+    box-shadow: 2px 2px 0 1px #85a6b0;
+}
+
+.button:active {
+    box-shadow: 0 0 0 0 #85a6b0, inset 3px 3px 3px #85a6b0;
+}
+
+.wrapper-buttons>div:nth-child(1) {
+    grid-area: A;
+
+}
+
+.wrapper-buttons>div:nth-child(2) {
+    grid-area: B;
+
+}
+
+.wrapper-buttons>div:nth-child(3) {
+    grid-area: C;
+}
+
+.wrapper-buttons>div:nth-child(4) {
+    grid-area: D;
+}
+
+.button {
+    background-color: #E1E1E6;
+    width: fit-content;
+    padding: clamp(2rem, 2rem + 2vw, 4.7rem);
+    border-radius: 2.4rem;
+}
+
+.floresta.active,
+.nuvem.active,
+.cafeteria.active,
+.fogo.active {
+    background-color: #02799D;
+}
+
+.pause.active svg path,
+.play.active svg path,
+.stop.active svg path,
+.plusFive.active svg path,
+.minusFive.active svg path {
+    fill: #02799D;
+}
+
+.floresta.active svg path,
+.nuvem.active svg path,
+.cafeteria.active svg path,
+.fogo.active svg path {
+    fill: white;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        display: flex;
+        gap: 58px;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+
+    }
+
+    .container .controls {
+        width: fit-content;
+    }
+
+
+    .container .timer {
+        width: 335px;
+    }
+
+    .timer span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.6166rem;
+        line-height: 14.8rem;
+    }
+}
